@@ -20,7 +20,6 @@ typedef struct {
     unsigned char sec;  // 秒
 } DateTimeInfo;
 
-
 class TimeUtil {
 
 public:

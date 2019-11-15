@@ -1,0 +1,14 @@
+prefix=/home/yk/Desktop/MP3/MP3/alsa-lib-1.1.6/alsa
+exec_prefix=/home/yk/Desktop/MP3/MP3/alsa-lib-1.1.6/alsa
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: alsa
+Description: Advanced Linux Sound Architecture (ALSA) - Library
+Version: 1.1.6
+Requires: 
+Libs: -L${libdir} -lasound
+Libs.private: -lm -ldl -lpthread -lrt
+# -I${includedir}/alsa below is just for backward compatibility
+# (it was set so mistakely in the older version)
+Cflags: -I${includedir} -I${includedir}/alsa
