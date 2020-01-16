@@ -30,7 +30,7 @@ public:
         pid_t pid;
         pthread_t tid;
 
-        int err = pthread_create(&tid,NULL,fun,NULL);
+        int err = pthread_create(&tid, NULL,fun, NULL); // 参数为空
         *_tid = tid;
         pid = getpid();
         printf("process id:%d,thread id:%d\n",(uint)pid,(uint)tid);
@@ -117,10 +117,10 @@ public:
 
     /**
     * @description: 线程任务
-    * @param {type} 
+    * @param {type} 通过结构体指针或数组指针传入多个参数
     * @return: 
     */ 
-    void *thread_task(void *) {
+    void *thread_task(void *arg) {
         printf("start thread\n"); 
 
         while (1) {
